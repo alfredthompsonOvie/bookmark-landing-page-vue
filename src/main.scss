@@ -21,6 +21,7 @@ body {
 	font-family: var(--ff);
 	font-size: var(--fs);
 	line-height: 1.5;
+	background-color: var(--SoftBlue);
 }
 a {
 	text-decoration: none;
@@ -43,6 +44,7 @@ ul {
 #app {
 	max-width: 1440px;
 	margin-inline: auto;
+	background-color: #fff;
 }
 
 // !main section
@@ -63,7 +65,16 @@ main{
 	width: 80%;
 	height: 80%;
 	border-radius: 150em 0 0 150em;
-	z-index: -1;
+	z-index: 1;
+}
+@media (min-width: 768px) {
+	.hero__graphic::after {
+		width: 70%;
+	}
+}
+.hero__graphic img {
+	position: relative;
+	z-index: 2;
 }
 .hero__content {
 	display: grid;
@@ -169,39 +180,44 @@ main{
 }
 // 11111111111111111111111111111111111111111111111111111111111111111
 // ! STYLES SPECIFIC TO FEATURES
-.tab__controls {
+.tab {
 	grid-column: 2;
 	grid-row: 1;
 	border-top: 1px solid var(--GrayishBlue);
 	border-bottom: 1px solid var(--GrayishBlue);
 }
-.tab__control__item + .tab__control__item {
+.tab__item + .tab__item {
 	border-top: 1px solid var(--GrayishBlue);
 }
-.tab__control__item {
-	padding: 1em;
+.tab__item {
 	position: relative;
 	display: flex;
 	flex-direction: column;
 }
-.tab__control__btn {
+.tab__btn {
+	display: inline-block;
+	padding: 2em 1.2em;
 	cursor: pointer;
+	font-size: 1rem;
 	color: var(--VeryDarkBlue);
 	transition: all 500ms linear;
 	&:hover {
 		color: var(--SoftRed);
 	}
 }
-.tab__control__btn--active {
+.tab__btn--active {
 	font-weight: var(--fw-md);
 }
-.tab__control--active {
+.tab--active {
 	position: absolute;
+	// left: 0;
 	bottom: 0;
 	background-color: var(--SoftRed);
 	height: 0.2em;
-	width: 8.5em;
+	width: 6em;
+	// width: 40%;
 	align-self: center;
+	transition: all .3s linear;
 }
 // 11111111111111111111111111111111111111111111111111111111111111111
 .tab__components{
@@ -336,7 +352,7 @@ main{
 .inner__subscribe{
 	grid-column: 2;
 	grid-row: 1;
-	max-width: 400px;
+	max-width: 450px;
 	margin-inline: auto;
 	text-align: center;
 }
@@ -363,10 +379,11 @@ main{
 .form__control{
 	width: 100%;
 	background-color: #fff;
-	padding: .5em;
-	padding: 10px 1.2em;
+	padding: 1em 2em;
 	border-radius: 5px;
 	text-align: left;
+	border: 0;
+	font-size: 1rem;
 }
 .form__control::placeholder{
 	color: var(--GrayishBlue);
@@ -384,7 +401,8 @@ main{
 	right: 1em;
 }
 .submitBtn	{
-	padding: .5em 1em;
+	padding: .9em 1.7em;
+	font-size: 1rem;
 	width: 100%;
 	background-color: var(--SoftRed);
 	color: #fff;
@@ -426,6 +444,7 @@ footer{
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	transition: all 500ms linear;
+	color: #fff;
 	&:hover {
 		color: var(--SoftRed);
 	}
@@ -436,6 +455,7 @@ footer{
 	justify-content: center;
 	gap: 2em;
 }
+
 .nav__bar--social img {
 	transition: all .1s linear;
 }
@@ -487,18 +507,7 @@ footer{
 		height: 1.4em;
 		cursor: pointer;
 	}
-	.hero__graphic::after {
-		content: "";
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		background-color: var(--SoftBlue);
-		width: 70%;
-		height: 80%;
-		border-radius: 50% 0 0 50%;
-		border-radius: 150em 0 0 150em;
-		z-index: -1;
-	}
+
 	.tab__component__graphic::before{
 		content: "";
 		position: absolute;
@@ -615,20 +624,20 @@ footer{
 		font-size: 0.95rem;
 		max-width: 455px;
 	}
-  .tab__controls {
+  .tab {
 		border-top: none;
     border-bottom: 1px solid var(--GrayishBlue);
     display: inline-flex;
     margin-inline: auto;
   }
-  .tab__control__item + .tab__control__item {
+  .tab__item + .tab__item {
 		border: none;
   }
-  .tab__control__btn {
-		padding: .2em 1.2em;
+  .tab__btn {
+		// padding: .2em 1.2em;
     font-size: 1rem;
   }
-  .tab__control--active {
+  .tab--active {
 		width: 100%;
     height: 0.25em;
   }
@@ -699,7 +708,8 @@ footer{
 	}
 	.submitBtn{
 		width: initial;
-		padding: .5em 1.2em;
+		// padding: .65em 1.2em;
+		// height: 100%;
 	}
 	.inner__footer{
 		display: flex;
