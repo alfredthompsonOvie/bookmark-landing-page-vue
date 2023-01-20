@@ -253,4 +253,40 @@ header {
 		color: var(--SoftRed);
 	}
 }
+/* MEDIA QUERIES */
+@media (min-width: 48em) {
+	.logo {
+		width: 12em;
+	}
+	.nav__item:nth-child(4) {
+		padding: 1.5em 0 0;
+	}
+	.nav__link {
+		font-size: 1.2rem;
+		padding: 1em 0;
+	}
+	.nav__link--alt {
+		padding: 0.8em;
+		border-radius: 5px;
+	}
+	.overlay__social__list {
+		gap: 3em;
+		margin-bottom: 3em;
+	}
+	.overlay__social__icon {
+		width: 3em;
+	}
+	.hamburger {
+		position: relative;
+		width: 1.4em;
+		height: 1.4em;
+		cursor: pointer;
+	}
+}
+// 1200px
+@media (min-width: 75em) {
+	header {
+		grid-template-columns: 0.2fr 1.6fr 0.2fr;
+	}
+}
 </style>

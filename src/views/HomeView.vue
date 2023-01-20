@@ -1,7 +1,7 @@
 <template>
 	<main>
 		<!-- hero -->
-		<section class="hero section--container">
+		<section class="hero">
 			<div class="hero__graphic">
 				<img src="@/assets/illustration-hero.svg" alt="" />
 			</div>
@@ -19,7 +19,7 @@
 			</div>
 		</section>
 		<!-- features -->
-		<section class="section section--features features section--container">
+		<section class="section section--features">
 			<div class="section__content feature__content">
 				<h2 class="heading heading--sec isHeading__features">Features</h2>
 				<p class="description description--features isDescription__features">
@@ -130,7 +130,7 @@
 			</div>
 		</section>
 		<!-- extensions -->
-		<section class="section section--extensions section--container">
+		<section class="section section--extensions">
 			<div class="section__content">
 				<h2 class="heading heading--sec">Download the extension</h2>
 				<p class="description description--features">
@@ -138,50 +138,10 @@
 					you’ve got a favourite you’d like us to prioritize.
 				</p>
 			</div>
-			<div class="extension__container">
-				<div class="extension">
-					<img
-						src="@/assets/logo-chrome.svg"
-						alt="chrome's icon"
-						class="extension__icon"
-					/>
-					<h4 class="heading heading--extension">Add to Chrome</h4>
-					<p class="extension--description">Minimum version 62</p>
-					<div class="extension__bg"></div>
-					<button class="cta cta--prim cta--extension">
-						Add & Install Extension
-					</button>
-				</div>
-				<div class="extension extension--firefox">
-					<img
-						src="@/assets/logo-firefox.svg"
-						alt="firefox's icon"
-						class="extension__icon"
-					/>
-					<h4 class="heading heading--extension">Add to Firefox</h4>
-					<p class="extension--description">Minimum version 55</p>
-					<div class="extension__bg"></div>
-					<button class="cta cta--prim cta--extension">
-						Add & Install Extension
-					</button>
-				</div>
-				<div class="extension extension--opera">
-					<img
-						src="@/assets/logo-opera.svg"
-						alt="opera mini's icon"
-						class="extension__icon"
-					/>
-					<h4 class="heading heading--extension">Add to Opera</h4>
-					<p class="extension--description">Minimum version 46</p>
-					<div class="extension__bg"></div>
-					<button class="cta cta--prim cta--extension">
-						Add & Install Extension
-					</button>
-				</div>
-			</div>
+			<AppExtensions />
 		</section>
 		<!-- faqs -->
-		<section class="section section--faq section--container">
+		<section class="section section--faq">
 			<div class="section__content">
 				<h2 class="heading heading--sec">Frequently Asked Questions</h2>
 				<p class="description description--features description--faq">
@@ -203,6 +163,7 @@
 
 <script>
 import AppLink from '@/components/AppLink.vue';
+import AppExtensions from '@/components/AppExtensions.vue';
 import AppFaqs from '@/components/faq/AppFaqs.vue';
 import AppNewsletter from '@/components/AppNewsletter.vue';
 import { ref } from "vue";
@@ -210,6 +171,7 @@ export default {
   name: "home",
   components: {
 		AppLink,
+		AppExtensions,
 		AppFaqs,
 		AppNewsletter
   },
