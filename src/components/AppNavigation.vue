@@ -1,8 +1,8 @@
 <template>
 	<header>
-		<nav class="nav__bar">
+		<nav class="nav__bar" role="navigation">
 			<!--! banner -->
-			<AppLink :to="{ name: 'home' }" class="main--logo">
+			<AppLink :to="{ name: 'home' }" class="main--logo" aria-label="bookmark homepage">
 				<img
 					src="@/assets/logo-bookmark.svg"
 					alt="bookmarks logo"
@@ -12,17 +12,27 @@
 			</AppLink>
 
 			<div class="hamburger" v-if="mobile">
-				<button type="button" @click.prevent="menu = !menu" v-if="!menu">
+				<button 
+				type="button"
+				@click.prevent="menu = !menu" 
+				v-if="!menu"
+				aria-label="open main menu"
+				>
 					<img
 						src="@/assets/icon-hamburger.svg"
-						alt="open mobile menu"
+						alt="open main menu"
 						class="menu"
 					/>
 				</button>
-				<button type="button" @click.prevent="menu = !menu" v-else>
+				<button 
+				type="button" 
+				@click.prevent="menu = !menu" 
+				v-else
+				aria-label="close main menu"
+				>
 					<img
 						src="@/assets/icon-close.svg"
-						alt="close mobile menu"
+						alt="close main menu"
 						class="menu"
 					/>
 				</button>

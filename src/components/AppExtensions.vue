@@ -14,7 +14,7 @@
         alt="chrome's icon"
         class="extension__icon"
       />
-      <h4 class="heading heading--extension">{{ ext.title }}</h4>
+      <h1 class="heading heading--extension">{{ ext.title }}</h1>
       <p class="extension--description">{{ ext.version }}</p>
       <div class="extension__bg"></div>
       <button class="cta cta--prim cta--extension">

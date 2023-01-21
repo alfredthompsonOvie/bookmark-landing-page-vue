@@ -270,6 +270,9 @@ main{
 .extension__icon{
 	margin-bottom: 1em;
 }
+.heading--extension{
+	font-size: 1.125rem;
+}
 .extension--description{
 	color: var(--SoftBlue);
 }
@@ -462,7 +465,10 @@ footer{
 		text-align: right;
 	}
 	a {
-		color: var(--SoftBlue);
+		color: var(--SoftRed);
+		letter-spacing: 1px;
+		text-decoration: underline;
+		// background-color: #fff;
 	}
 }
 // ! MEDIA QUERY

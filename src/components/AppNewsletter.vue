@@ -1,7 +1,7 @@
 <template>
 	<section class="subscribe">
 		<div class="inner__subscribe">
-			<h6 class="heading--sub">35,000+ already joined</h6>
+			<h1 class="heading--sub">35,000+ already joined</h1>
 			<p class="description--sub">Stay up-to-date with what we’re doing</p>
 			<form 
       class="form" 
