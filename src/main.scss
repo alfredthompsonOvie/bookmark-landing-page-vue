@@ -355,10 +355,11 @@ main{
 	letter-spacing: 5px;
 	text-transform: uppercase;
 }
-.description--sub{
+.description--sub {
 	color: #fff;
 	font-size: clamp(1.6rem, 7vw, 2rem);
 	margin: .4em 0 1em;
+	font-weight: 400;
 }
 .form__group{
 	position: relative;
@@ -368,6 +369,11 @@ main{
 	padding: .2em .2em 1.6em;
 	background-color: var(--SoftRed);
 	border-radius: 5px 5px 10px 10px;
+}
+label {
+	opacity: 0;
+	width: 0;
+	display: inline-block;
 }
 .form__control{
 	width: 100%;

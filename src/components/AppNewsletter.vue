@@ -2,7 +2,7 @@
 	<section class="subscribe">
 		<div class="inner__subscribe">
 			<h1 class="heading--sub">35,000+ already joined</h1>
-			<p class="description--sub">Stay up-to-date with what we’re doing</p>
+			<h2 class="description--sub">Stay up-to-date with what we’re doing</h2>
 			<form 
       class="form" 
       @submit="onSubmit"
@@ -12,7 +12,7 @@
         class="form__group"
         :class="{'form__group--err': errors.email}"
         >
-					<label for="email"></label>
+					<label for="email"> Email:</label>
 					<input
 						type="email"
 						class="form__control"
@@ -20,6 +20,8 @@
             name="email"
             v-model="email"
 						placeholder="Enter your email address"
+						aria-label="Enter your email address"
+						aria-required="true"
 					/>
 					<img
 						src="@/assets/icon-error.svg"

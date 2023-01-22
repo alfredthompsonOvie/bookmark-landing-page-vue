@@ -11,7 +11,7 @@
     >
       <img
         :src="require(`@/assets/${ext.img}`)"
-        alt="chrome's icon"
+        :alt="`${ext.title.split(' ').slice(2).join('')} logo`"
         class="extension__icon"
       />
       <h1 class="heading heading--extension">{{ ext.title }}</h1>
@@ -48,7 +48,7 @@ export default {
 				version: "Minimum version 46",
 				linkText: "Add & Install Extension",
 			},
-		]);
+    ]);
 
     return {
       extensions,
